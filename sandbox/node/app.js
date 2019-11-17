@@ -1,19 +1,14 @@
+const modUtility =require('./utility');
+const modPerson =require('./person');
+
+let bday = new Date;
+bday.setFullYear(1994, 2, 03);
 
 
-// //VARIABLES
-// let selection = 'all';
+modPerson.setPerson('firstName','Enmanuel');
+modPerson.setPerson('lastName','Medrano');
+modPerson.setPerson('birthdayDate',bday);
+modPerson.setPerson('favoriteColor','blue');
+//colorsList[2] = person.favoriteColor;
 
-// //Bracket Notation
-// person['birthdayDate'].setFullYear(1994, 2, 03);
-// setPerson('firstName','Enmanuel');
-// setPerson('lastName','Medrano');
-// setPerson('favoriteColor','blue');
-// setPerson('age',getAge(person['birthdayDate']));
-// colorsList[2] = person.favoriteColor;
-
-// showOnBrowser();
-// clearPerson();
-
-console.log(module);
-
-
+modPerson.getPerson();

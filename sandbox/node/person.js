@@ -1,31 +1,41 @@
+const modUtility =require('./utility');
+
 //ARRAY
 let colorsList = ['red', 'black'];
+
 //OBJECT
-
 let person = {
-    firstName: null
-    , lastName: null
-    , age: 0
-    , favoriteColor: null
-    , birthdayDate: new Date()
+     firstName: null
+    ,lastName: null
+    ,favoriteColor: null
+    ,birthdayDate: new Date()
 }
-
 
 //FUNCIONES
 function setPerson(pProperty,pValue) {
-    person[pProperty] = pValue;
+        person[pProperty] = pValue;
 }
+
 
 function getAge(inDate) {
-    //inDate =new Date(inDate);
-    return Math.floor((CURRENT_DATE - inDate) / (MS_PER_YEAR));
+    return Math.floor((modUtility.CURRENT_DATE - inDate) / (modUtility.MS_PER_YEAR));
 }
 
-function showOnBrowser() {
+function getPerson() {
     console.log(`Name: ${person.firstName} ${person.lastName}`);
-    console.log(`Age: ${person.age.toString()}`);
-    console.log(`Birthday: ${formatDate(person.birthdayDate)}`);
+    console.log(`Age: ${getAge(person.birthdayDate)}`);
+    console.log(`Birthday: ${modUtility.formatDate(person.birthdayDate)}`);
+   
 }
+
 function clearPerson() {
-    person = null
+    person['firstName'] = Null;
+    person['lastName'] = Null;
+    person['favoriteColor'] = Null;
+    person['birthdayDate'] = Null;
+
 }
+
+module.exports.setPerson=setPerson;
+module.exports.getPerson=getPerson;
+module.exports.clearPerson=clearPerson;
