@@ -3,11 +3,11 @@ const app = express();
 const morgan = require("morgan");
 
 const orderRoutes = require("./api/routes/orders");
-const userRoutes = require('./api/routes/user');
+//const userRoutes = require('./api/routes/user');
 
 app.use(morgan('dev'));
 app.use("/orders", orderRoutes);
-app.use("/user", userRoutes);
+//app.use("/user", userRoutes);
 
 app.use((req, res, next) => {
     const error = new Error("Not found");
