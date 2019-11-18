@@ -18,6 +18,6 @@ const itAlive = true;
 
 }
 
-module.exports.MS_PER_YEAR=MS_PER_YEAR;
-module.exports.CURRENT_DATE=CURRENT_DATE;
-module.exports.formatDate=formatDate;
+exports.MS_PER_YEAR=MS_PER_YEAR;
+exports.CURRENT_DATE=CURRENT_DATE;
+exports.formatDate=formatDate;

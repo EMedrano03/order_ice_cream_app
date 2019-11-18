@@ -1,4 +1,4 @@
-const modUtility =require('./utility');
+const utility =require('./utility');
 
 //ARRAY
 let colorsList = ['red', 'black'];
@@ -18,13 +18,13 @@ function setPerson(pProperty,pValue) {
 
 
 function getAge(inDate) {
-    return Math.floor((modUtility.CURRENT_DATE - inDate) / (modUtility.MS_PER_YEAR));
+    return Math.floor((utility.CURRENT_DATE - inDate) / (utility.MS_PER_YEAR));
 }
 
 function getPerson() {
     console.log(`Name: ${person.firstName} ${person.lastName}`);
     console.log(`Age: ${getAge(person.birthdayDate)}`);
-    console.log(`Birthday: ${modUtility.formatDate(person.birthdayDate)}`);
+    console.log(`Birthday: ${utility.formatDate(person.birthdayDate)}`);
    
 }
 
@@ -36,6 +36,6 @@ function clearPerson() {
 
 }
 
-module.exports.setPerson=setPerson;
-module.exports.getPerson=getPerson;
-module.exports.clearPerson=clearPerson;
+exports.setPerson=setPerson;
+exports.getPerson=getPerson;
+exports.clearPerson=clearPerson;
