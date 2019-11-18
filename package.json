@@ -1,0 +1,26 @@
+{
+  "name": "order_ice_cream_app",
+  "version": "1.0.0",
+  "description": "API para ordenar Helados",
+  "main": "app.js",
+  "scripts": {
+    "test": "test-app",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EMedrano03/order_ice_cream_app.git"
+  },
+  "keywords": [
+    "oic"
+  ],
+  "author": "Enmanuel Medrano 2011-5852",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EMedrano03/order_ice_cream_app/issues"
+  },
+  "homepage": "https://github.com/EMedrano03/order_ice_cream_app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
