@@ -1,29 +1,25 @@
 const utility =require('./utility');
 const person =require('./person');
 
-//
-const http = require('http');
-const EventEmitter = require('events');
+const events = new utility.EventsHandler();
 
-const emitter = EventEmitter()
+// let bday = new Date;
+// bday.setFullYear(1994, 2, 03);
 
-emitter.on('TEST-1',function() {
-   console.log('Test fue disparado'); 
-});
-
-let bday = new Date;
-bday.setFullYear(1994, 2, 03);
-
-
-person.setPerson('firstName','Enmanuel');
-person.setPerson('lastName','Medrano');
-person.setPerson('birthdayDate',bday);
-person.setPerson('favoriteColor','blue');
+// person.setPerson('firstName','Enmanuel');
+// person.setPerson('lastName','Medrano');
+// person.setPerson('birthdayDate',bday);
+// person.setPerson('favoriteColor','blue');
 //colorsList[2] = person.favoriteColor;
 
-person.getPerson();
-emitter.emit('TEST-1');
-var patObjet =path.parse(__filename);
+//person.getPerson();
+/*******************************/
 
-//console.log(__filename);
-//console.log(patObjet);
+// events.on('FormateoFecha',(arg)=>{
+//    console.log('Evento: ',arg)
+// });
+
+// events.showEvent('Mensaje de prueba');
+/******************************************/
+
+utility.serverPort(3000);

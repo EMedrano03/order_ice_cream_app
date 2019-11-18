@@ -2,7 +2,9 @@
 //console.log('Testing from JS file');
 
 //Variable Sample
+import EventEmitter from 'events';
 
+EventEmitter.
 const MS_PER_YEAR = (1000 * 60 * 60 * 24 * 365.25);
 const CURRENT_DATE = new Date();
 const itAlive = true;
